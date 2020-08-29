@@ -634,6 +634,10 @@ textarea.input {
   color: #888;
 }
 
+.title {
+  text-align: center;
+}
+
 .title__item {
   font-family: "Ceremonious";
   color: #bb9c66;
@@ -1073,29 +1077,49 @@ body.ie .ibg img {
   background: url("../img/icons/menu/04.png") left center no-repeat;
 }
 
-/*
-	//Burger
-	.icon-menu {
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width: 30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span{@include anim(0.3s,0s);top: calc(50% - 1px);left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
-			&:first-child{top: 0px;}
-			&:last-child{top: auto; bottom: 0px;}
-		}
-		&._active{
-			span{@include scale(0);
-				&:first-child{@include rotate(-45deg);top: calc(50% - 1px);}
-				&:last-child{@include rotate(45deg);bottom: calc(50% - 1px);}
-			}
-		}
-	}
-*/
+/* Слайдер */
+
+/* Слайдер запущен */
+
+/* Слайдер с точками */
+
+/* Ограничивающая оболочка */
+
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Слайд */
+
+/* Слайд активный (показывается) */
+
+/* Слайд основной */
+
+/* Слайд по центру */
+
+/* Клонированный слайд */
+
+/* Стрелка */
+
+/* Стрелка влево */
+
+/* Стрелка вправо */
+
+/* Стрелка не активная */
+
+/* Точки (булиты) */
+
+/* Активная точка */
+
+/* Элемент точки */
 
 .main-slider {
   position: relative;
@@ -1132,15 +1156,59 @@ body.ie .ibg img {
           transform: rotate(45deg);
 }
 
+.control-main-slider {
+  /* Стрелка влево */
+  /* Стрелка вправо */
+}
+
+.control-main-slider .slick-arrow {
+  position: relative;
+  z-index: 2;
+  background: url("../img/icons/arrow.png") 0 0 no-repeat;
+  width: 14px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.control-main-slider .slick-prev {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.control-main-slider__decor {
+  position: relative;
+  z-index: 2;
+  margin: 0px 12px;
+  -webkit-animation: rotate 5s infinite linear;
+          animation: rotate 5s infinite linear;
+}
+
 .item-main-slider {
   text-align: center;
   padding: 30px 0px 100px 0px;
   position: relative;
 }
 
+.item-main-slider__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .item-main-slider__content {
   position: relative;
   z-index: 2;
+  height: 100%;
 }
 
 .item-main-slider__text {
@@ -1149,6 +1217,9 @@ body.ie .ibg img {
   font-size: 15px;
   line-height: calc(25 / 15);
   color: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .item-main-slider__bg {
@@ -1161,29 +1232,6 @@ body.ie .ibg img {
 
 .item-main-slider__btn {
   margin: 55px 0px 0px 0px;
-}
-
-.control-main-slider__arrow {
-  position: relative;
-  z-index: 2;
-  background: url("../img/icons/arrow.png") 0 0 no-repeat;
-  width: 14px;
-  height: 24px;
-  cursor: pointer;
-}
-
-.control-main-slider__arrow_prev {
-  -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-
-.control-main-slider__decor {
-  position: relative;
-  z-index: 2;
-  margin: 0px 12px;
-  -webkit-animation: rotate 5s infinite linear;
-          animation: rotate 5s infinite linear;
 }
 
 @-webkit-keyframes rotate {
@@ -1199,6 +1247,30 @@ body.ie .ibg img {
             transform: rotate(360deg);
   }
 }
+
+/*
+	//Burger
+	.icon-menu {
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span{@include anim(0.3s,0s);top: calc(50% - 1px);left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
+			&:first-child{top: 0px;}
+			&:last-child{top: auto; bottom: 0px;}
+		}
+		&._active{
+			span{@include scale(0);
+				&:first-child{@include rotate(-45deg);top: calc(50% - 1px);}
+				&:last-child{@include rotate(45deg);bottom: calc(50% - 1px);}
+			}
+		}
+	}
+*/
 
 @media (min-width: 992px) {
   .btn:hover .btn__body span:after {
@@ -1389,4 +1461,4 @@ body.ie .ibg img {
 
 .webp .user-header__link_4{ background: url(../img/icons/menu/04.webp) left center no-repeat; }
 
-.webp .control-main-slider__arrow{ background: url(../img/icons/arrow.webp) 0 0 no-repeat; }
+.webp .control-main-slider .slick-arrow{ background: url(../img/icons/arrow.webp) 0 0 no-repeat; }
