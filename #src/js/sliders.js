@@ -61,6 +61,35 @@ if($('.slider-lots__body').length>0){
 		]
 	});
 }
+
+// quotes__slider
+if($('.slider-quotes__body').length>0){
+	$('.slider-quotes__body').slick({
+		adaptiveHeight: true, 
+		draggable: true,
+		//autoplay: true,
+		infinite: true,
+		//dots: true,
+		arrows: true,
+		//accessibility: false,
+		slidesToShow: 1,
+		fade: true,
+		//autoplaySpeed: 5000,
+		speed: 1000,
+		//appendArrows:$('.slider-lots__control'),
+		nextArrow:'.control-slider-quotes__circle',
+		prevArrow:'',
+		//mobileFirst: true,
+		/* responsive: [{
+				breakpoint: 320,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		] */
+	});
+}
+
 /*
 
 
