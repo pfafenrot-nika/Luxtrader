@@ -1110,6 +1110,86 @@ textarea.input {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.service {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.service__image {
+  height: 205px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 0px 10px 0px;
+}
+
+.service__title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  color: #fff;
+  font-family: "PFDin";
+  font-size: 21px;
+  font-weight: 500;
+  line-height: calc(25 / 21);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.service__text {
+  margin: 23px 0px 0px 0px;
+  color: #bb9c66;
+  font-family: "PT Sans";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: calc(25 / 15);
+  max-height: 50px;
+  overflow: hidden;
+}
+
+.service__btn {
+  margin: 30px 0px 0px 0px;
+  color: #fff;
+  font-family: "PFDin";
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2.12px;
+  position: relative;
+  text-align: center;
+}
+
+.service__btn:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #bb9c66;
+}
+
+.service__btn span {
+  background-color: #1c242a;
+  position: relative;
+  z-index: 2;
+  padding: 0px 15px;
+}
+
 .row:after {
   display: block;
   content: "";
@@ -1812,6 +1892,10 @@ body.ie .ibg img {
   margin: 0px 20px;
 }
 
+.categories {
+  margin: 0px 0px 70px 0px;
+}
+
 .categories__items {
   margin: 0px 0px 85px 0px;
 }
@@ -2012,6 +2096,92 @@ body.ie .ibg img {
   height: 10px;
 }
 
+.services {
+  padding: 60px 0px 40px 0px;
+  background-color: #1c242a;
+}
+
+.services__header {
+  margin: 0px 0px 40px 0px;
+}
+
+.services__row {
+  margin: 0px -50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.services__column {
+  padding: 0px 50px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+  margin: 0px 0px 60px 0px;
+}
+
+/* // .services__body
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// .services__item
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		img {
+
+		}
+		span {
+			color: #fff;
+			font-family: "PFDin";
+			font-size: 21px;
+			font-weight: 500;
+			line-height: 25px;
+			text-transform: uppercase;
+			letter-spacing: 2.1px;
+		}
+		p {
+			color: #bb9c66;
+			font-family: "PT Sans";
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 25px;
+		}
+		a {
+			color: #fff;
+			font-family: "PFDin";
+			font-size: 21px;
+			font-weight: 500;
+			line-height: 25px;
+			text-transform: uppercase;
+			letter-spacing: 2.12px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			&:before,
+			&:after {
+				content: "";
+				position: absolute;
+				flex: 1 1 auto;
+				height: 1px;
+				width: 50px;
+				background-color: #bb9c66;
+			}
+		}
+	}
+ */
+
 @media (min-width: 992px) {
   .btn:hover .btn__body span:after {
     opacity: 0.3;
@@ -2075,6 +2245,12 @@ body.ie .ibg img {
   }
 
   .categories__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+
+  .services__column {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
@@ -2248,6 +2424,18 @@ body.ie .ibg img {
 
 @media (max-width: 650px) {
   .categories__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .services {
+    padding: 40px 0px 0px 0px;
+  }
+
+  .services__column {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;

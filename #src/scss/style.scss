@@ -213,6 +213,7 @@ body {
 
 //</БЛОК "КАТЕГОРИИ">===========================================================================================================
 .categories {
+	margin: 0px 0px 70px 0px;
 	// .categories__items
 	&__items {
 		margin: 0px 0px 85px 0px;
@@ -385,4 +386,106 @@ body {
 		}
 	}
 }
+
+//</БЛОК "УСЛУГИ">===========================================================================================================
+.services {
+	padding: 60px 0px 40px 0px;
+	background-color: #1c242a;
+	@media (max-width: 640px) {
+		padding: 40px 0px 0px 0px;
+	}
+	// .services__container
+	&__container {
+	}
+
+	// .services__header
+	&__header {
+		margin: 0px 0px 40px 0px;
+	}
+
+	// .services__item
+	&__item {
+	}
+
+	// .services__row
+	&__row {
+		margin: 0px -50px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	// .services__column
+	&__column {
+		padding: 0px 50px;
+		flex: 0 1 33.333%;
+		margin: 0px 0px 60px 0px;
+		@media (max-width: 975px) {
+			flex: 0 1 50%;
+		}
+		@media (max-width: 640px) {
+			flex: 1 1 100%;
+		}
+	}
+}
+
+
+
+	/* // .services__body
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// .services__item
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		img {
+
+		}
+		span {
+			color: #fff;
+			font-family: "PFDin";
+			font-size: 21px;
+			font-weight: 500;
+			line-height: 25px;
+			text-transform: uppercase;
+			letter-spacing: 2.1px;
+		}
+		p {
+			color: #bb9c66;
+			font-family: "PT Sans";
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 25px;
+		}
+		a {
+			color: #fff;
+			font-family: "PFDin";
+			font-size: 21px;
+			font-weight: 500;
+			line-height: 25px;
+			text-transform: uppercase;
+			letter-spacing: 2.12px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			&:before,
+			&:after {
+				content: "";
+				position: absolute;
+				flex: 1 1 auto;
+				height: 1px;
+				width: 50px;
+				background-color: #bb9c66;
+			}
+		}
+	}
+ */
+
 
