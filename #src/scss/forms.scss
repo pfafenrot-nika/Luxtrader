@@ -1,5 +1,10 @@
 //<FORM (a.f+tab)>====================================================================================================
-.form{}
+.form{
+	&__error {
+		color: red;
+		margin: 10px 0px 0px 0px;
+	}
+}
 .form-row{@include flexbox();margin: 0px -15px;}
 .form__column{padding: 0px 15px;}
 .form-input{}
@@ -138,10 +143,16 @@ input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearance:n
 .input{
 	border-radius: 0 !important;
 	width: 100%;
+	height: 100%;
+	color: #4f4f4f;
+	font-size: 15px;
 	display: block;
-	padding: 0px 20px;
-	&.focus{}
-	&.err{}
+	padding: 0px 25px;
+	&.focus{
+		color: #000;
+	}
+	&.err{
+	}
 }
 textarea.input{
 	resize:none;
@@ -155,7 +166,8 @@ textarea.input{
 	&:before{content:'';
 		left: 0;
 		top: 0;
-		width: 18px;height: 18px;
+		width: 18px;
+		height: 18px;
 		border: 1px solid #a3a3a3;
 		position: absolute;
 	}

@@ -3,7 +3,7 @@
 if($('.main-slider__body').length>0){
 	$('.main-slider__body').slick({
 		adaptiveHeight: true, 
-		autoplay: true,
+		//autoplay: true,
 		//infinite: false,
 		//dots: true,
 		arrows: true,
@@ -79,14 +79,22 @@ if($('.slider-quotes__body').length>0){
 		//appendArrows:$('.slider-lots__control'),
 		nextArrow:'.control-slider-quotes__circle',
 		prevArrow:'',
-		//mobileFirst: true,
-		/* responsive: [{
+		mobileFirst: true,
+		responsive: [
+			{
 				breakpoint: 320,
 				settings: {
-					slidesToShow: 1
+					adaptiveHeight: true,
+					speed: 500,
+				}
+			},
+			{
+				breakpoint: 570,
+				settings: {
+					adaptiveHeight: false,
 				}
 			}
-		] */
+		], 
 	});
 }
 
