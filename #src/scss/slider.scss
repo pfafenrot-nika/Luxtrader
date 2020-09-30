@@ -136,7 +136,16 @@
 		font-size: 15px;
 		line-height: calc(25 / 15);
     color: #fff;
-    flex: 1 1 auto;
+		flex: 1 1 auto;
+		@media (min-width: 650px) {
+			// Анимация текста при прокрутке
+			opacity: 0;
+			transition: all 1.5s ease 0s;
+			&._active {
+				opacity: 1;
+				transition: all 1.5s ease 0.8s;
+			}
+		}
 	}
 
 	// .item-main-slider__bg

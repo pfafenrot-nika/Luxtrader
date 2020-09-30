@@ -116,6 +116,8 @@ body {
 */
 
 
+
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
 	padding: 75px 0px 0px 0px;
@@ -274,6 +276,30 @@ body {
 				display: none;
 			}
 		}
+		// Анимация "Поочередное появление" иконок категорий
+		@media (min-width: 650px) {
+			.categories__column {
+				transform: scale(0);
+				opacity: 0;
+				transition: all 1.5s ease 0s;
+			}
+			&._active {
+				.categories__column {
+					@for $i from 1 to 10 {
+						$delay: $i * 0.2;
+						&:nth-child(#{$i}) {
+							@if $i==1 {
+								transition: transform 1.5s ease 0s;
+							} @else {
+								transition: transform 1.5s ease #{$delay + s};
+							}
+						}
+					}
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
+		}
 	}
 
 	// .categories__column
@@ -429,6 +455,30 @@ body {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		// Анимация "Поочередное появление" карточек услуг
+		@media (min-width: 650px) {
+			.services__column {
+				transition: all 0.8s ease 0s;
+				transform: translate(-20%, 0);
+				opacity: 0;
+			}
+			&._active {
+				.services__column {
+					@for $i from 1 to 4 {
+						$delay: $i * 0.2;
+						&:nth-child(#{$i}) {
+							@if $i==1 {
+								transition: all 0.8s ease 0s;
+							} @else {
+								transition: all 0.8s ease #{$delay + s};
+							}
+						}
+					}
+					transform: translate(0, 0);
+					opacity: 1;
+				}
+			}
+		}
 	}
 
 	// .services__column
@@ -602,6 +652,30 @@ body {
 		flex-wrap: wrap;
 		@media (max-width: 767px) {
 			display: block;
+		}
+		// Анимация блоков "Появление снизу"
+		@media (min-width: 650px) {
+			.info__column {
+				transition: all 0.8s ease 0s;
+				transform: translate(0, 120%);
+				opacity: 0;
+			}
+			&._active {
+				.info__column {
+					@for $i from 1 to 4 {
+						$delay: $i * 0.3;
+						&:nth-child(#{$i}) {
+							@if $i==1 {
+								transition: all 0.8s ease 0s;
+							} @else {
+								transition: all 0.8s ease #{$delay + s};
+							}
+						}
+						transform: translate(0, 0);
+						opacity: 1;
+					}
+				}
+			}
 		}
 	}
 

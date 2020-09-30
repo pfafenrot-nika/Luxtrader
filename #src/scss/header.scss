@@ -103,6 +103,10 @@
     text-transform: uppercase;
     letter-spacing: 1.4px;
     color: #fff;
+    transition: color 0.3s ease;
+    &._active {
+      color: #bb9c66;
+    }
     @media (min-width: 992px) {
       &:hover {
         text-decoration: underline;
