@@ -6,3 +6,11 @@
 
 ***
 [Посмотреть верстку на GitHub Pages](https://pfafenrot-nika.github.io/Luxtrader/)
+
+***
+
+## Tech Stack:
+* Html
+* Scss
+* Js
+* Gulp
